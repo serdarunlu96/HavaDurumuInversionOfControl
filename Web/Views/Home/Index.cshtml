@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Hava Durumu Ogren</h1>
+    <form method="get">
+        <div class="mb-3">
+            <input class="form-control" type="text" name="yer" placeholder="Yer ismi...">
+        </div>
+        <button class="btn btn-primary">Sıcaklık Getir</button>
+    </form>
+</div>
+
+@if (ViewBag.Sonuc != null)
+{
+    <div class="mt-3 text-center alert alert-success">
+        @ViewBag.Sonuc
+    </div>
+}
